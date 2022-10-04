@@ -8,8 +8,8 @@ class Login extends React.Component {
     super();
     this.state = {
       isBtnDisabled: true,
-      senha: '',
       email: '',
+      senha: '',
     };
   }
 
@@ -22,10 +22,10 @@ class Login extends React.Component {
 
   handleButton = () => {
     const { email, senha } = this.state;
-    const minimoSenha = 5;
+    const minimoSenha = 6;
     const regex = /\S+@\S+\.\S+/;
     const verificarEmail = email && regex.test(email);
-    const verificarSenha = senha.length > minimoSenha;
+    const verificarSenha = senha.length >= minimoSenha;
     this.setState({
       isBtnDisabled: !(verificarEmail && verificarSenha),
     });
