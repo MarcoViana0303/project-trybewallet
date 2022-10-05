@@ -31,11 +31,16 @@ class WalletForm extends Component {
     dispatch(exchangeRate(
       { ...this.state, id: expenses.length },
     ));
+
+    this.setState({
+      value: '',
+      description: '',
+    });
   };
 
   render() {
     const { currencies } = this.props;
-    const { id, value, description, currency, method, tag } = this.state;
+    const { value, description, currency, method, tag } = this.state;
     return (
       <div>
         <form>
@@ -102,7 +107,7 @@ class WalletForm extends Component {
 WalletForm.propTypes = {
   currencies: PropTypes.objectOf().isRequired,
   dispatch: PropTypes.func.isRequired,
-
+  expenses: PropTypes.objectOf().isRequired,
 };
 
 const mapStateToProps = (state) => ({
