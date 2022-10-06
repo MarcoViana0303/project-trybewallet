@@ -105,9 +105,9 @@ class WalletForm extends Component {
 }
 
 WalletForm.propTypes = {
-  currencies: PropTypes.objectOf().isRequired,
+  currencies: PropTypes.shape.isRequired,
   dispatch: PropTypes.func.isRequired,
-  expenses: PropTypes.objectOf().isRequired,
+  expenses: PropTypes.shape.isRequired,
 };
 
 const mapStateToProps = (state) => ({
