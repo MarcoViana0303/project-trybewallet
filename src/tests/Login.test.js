@@ -115,6 +115,7 @@ describe('Verifique se a página inicial funciona corretamete', () => {
     userEvent.click(adicionarDespesa);
   });
 
+  // com a ajuda do meu coleguinha Beterraba
   test('se o retorno da api é gerada no clique de adicionar despesas', async () => {
     jest.spyOn(global, 'fetch').mockImplementation(async () => ({ json: async () => mockData }));
     renderWithRouterAndRedux(<Wallet />);
