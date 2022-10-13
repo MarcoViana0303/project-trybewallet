@@ -4,6 +4,8 @@ import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 import { renderWithRouterAndRedux } from './helpers/renderWith';
 import App from '../App';
+import mockData from './helpers/mockData';
+import Wallet from '../pages/Wallet';
 
 describe('Verifique se a página inicial funciona corretamete', () => {
   test('Verifique se os elementos estão na tela', () => {
@@ -17,11 +19,10 @@ describe('Verifique se a página inicial funciona corretamete', () => {
     expect(inputSenha).toBeInTheDocument();
     expect(buttonEntrar).toBeInTheDocument();
   });
-  test('Verifique a página de Login', async () => {
+  test('Verifique a página de Login', () => {
     const { history } = renderWithRouterAndRedux(<App />);
     const inputEmail = screen.getByPlaceholderText('email');
     const inputSenha = screen.getByPlaceholderText('senha');
-    const { pathname } = history.location;
     const buttonEntrar = screen.getByRole('button', { name: /entrar/i });
 
     const regexEmail1 = /\S+@\S+\.\S+/;
@@ -36,7 +37,10 @@ describe('Verifique se a página inicial funciona corretamete', () => {
     expect(inputSenha).toBeInTheDocument();
     expect(inputSenha.value.length).toEqual(8);
     expect(inputEmail.value).toBe('example@example.com');
-    expect(pathname).toBe('/');
+
+    userEvent.click(buttonEntrar);
+    const { pathname } = history.location;
+    expect(pathname).toBe('/carteira');
   });
 
   test('Verifica se a /carteira renderiza os elementos necessários', () => {
@@ -65,10 +69,11 @@ describe('Verifique se a página inicial funciona corretamete', () => {
     act(() => {
       history.push('/carteira');
     });
+
     const inputValue = screen.getByPlaceholderText(/valor da despesa/i);
     const description = screen.getByPlaceholderText(/descrição da despesa/i);
     const moeda = screen.getByText('Moeda');
-    userEvent.type(inputValue, '350');
+    userEvent.type(inputValue, '5');
     userEvent.type(description, 'bife à parmegiana');
 
     const metodoPagamento = screen.getByText('Método de pagamento');
@@ -108,5 +113,15 @@ describe('Verifique se a página inicial funciona corretamete', () => {
 
     const adicionarDespesa = screen.getByRole('button', { name: /adicionar despesa/i });
     userEvent.click(adicionarDespesa);
+  });
+
+  test('se o retorno da api é gerada no clique de adicionar despesas', async () => {
+    jest.spyOn(global, 'fetch').mockImplementation(async () => ({ json: async () => mockData }));
+    renderWithRouterAndRedux(<Wallet />);
+
+    const adicionarDespesa2 = screen.getByRole('button', { name: /adicionar despesa/i });
+    userEvent.click(adicionarDespesa2);
+
+    expect(global.fetch).toHaveBeenCalled();
   });
 });

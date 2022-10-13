@@ -38,6 +38,7 @@ class Table extends Component {
                 <td>Real</td>
               </tr>
             ))}
+            <button data-testid="delete-btn" type="button"> Marco</button>
           </tbody>
         </table>
       </div>
