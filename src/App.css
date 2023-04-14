@@ -40,19 +40,43 @@
   }
 }
 
+/* Estilização na tela de despesas */
 .table-wallet {
   border: 1px solid #061533;
   margin: 0 auto;
   border-collapse: collapse; /* Une as bordas adjacentes das células */
-  
+  background-color: #061533;
 }
 
 .div-element {
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+}
+
+.div-element button {
+  height: 50px;
+  border: none;
+  border-radius: 5em;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-left: 40px;
+}
+
+.div-element input, select{
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 5em;
+  margin-bottom: 20px;
 }
 
 td, th {
-  border: 5px solid #061533; 
+  border: 5px solid #2E7D32; 
   padding: 10px; 
 }
 
@@ -73,6 +97,7 @@ td, th {
     border: none;
     outline: none;
     border-radius: 5em;
+    margin-bottom: 20px;
   }
   
   .form-login button {
