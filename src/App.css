@@ -56,6 +56,36 @@ td, th {
   padding: 10px; 
 }
 
-.form-input {
-  background-color: red;
+
+/* Estilização da tela de login */
+.form-login {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-login input {
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5em;
+  }
+  
+  .form-login button {
+    height: 50px;
+    border: none;
+    border-radius: 5em;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+button:enabled {
+  border: #2E7D32;
+  background-color: #8BC34A;
+  color: white;
+  cursor:pointer;
 }
