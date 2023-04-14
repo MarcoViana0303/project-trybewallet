@@ -39,3 +39,23 @@
     transform: rotate(360deg);
   }
 }
+
+.table-wallet {
+  border: 1px solid #061533;
+  margin: 0 auto;
+  border-collapse: collapse; /* Une as bordas adjacentes das células */
+  
+}
+
+.div-element {
+  text-align: center;
+}
+
+td, th {
+  border: 5px solid #061533; 
+  padding: 10px; 
+}
+
+.form-input {
+  background-color: red;
+}

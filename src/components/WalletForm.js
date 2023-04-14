@@ -43,7 +43,7 @@ class WalletForm extends Component {
     const { value, description, currency, method, tag } = this.state;
     return (
       <div>
-        <form>
+        <form className='form-input'>
           <input
             type="text"
             name="value"

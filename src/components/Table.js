@@ -7,7 +7,7 @@ class Table extends Component {
     const { expenses } = this.props;
     return (
       <div>
-        <table>
+        <table className='table-wallet'>
           <thead>
 
             <tr>
@@ -24,8 +24,6 @@ class Table extends Component {
           </thead>
           <tbody>
             {expenses.map((el) => (
-
-              /* <td>{el.exchangeRates[el.currency]}</td>  */
               <tr key={ el.id }>
                 <td>{el.description}</td>
                 <td>{el.tag}</td>
@@ -38,7 +36,7 @@ class Table extends Component {
                 <td>Real</td>
               </tr>
             ))}
-            <button data-testid="delete-btn" type="button"> Marco</button>
+            {/* <button data-testid="delete-btn" type="button">Deletar despesas</button> */}
           </tbody>
         </table>
       </div>
