@@ -12,6 +12,17 @@ Para garantir a qualidade da aplicação, foram desenvolvidos testes unitários 
 
 Por fim, a aplicação foi refinada para atingir 90% de cobertura total, garantindo maior confiabilidade e segurança no gerenciamento das despesas pessoais.
 
+<details>
+  <summary>Lista de habilidades utilizadas no projeto</summary>
+  
+  - Criar um store Redux em aplicações React;
+  - Criar reducers no Redux em aplicações React;
+  - Criar actions no Redux em aplicações React;
+  - Criar dispatchers no Redux em aplicações React;
+  - Conectar Redux aos componentes React;
+  - Criar actions assíncronas na sua aplicação React que faz uso de Redux.
+  
+</details>
 
 ## Rodando localmente
 
