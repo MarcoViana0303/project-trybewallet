@@ -1,7 +1,6 @@
 
 # Trybewallet
 
-Projeto Carteira Pessoal
 Este projeto consiste em uma aplicação web para gerenciamento de despesas pessoais. A aplicação possui uma página inicial de login com os campos "E-mail" e "Senha", onde o usuário deve informar suas credenciais para acessar a página principal da carteira.
 
 Na página principal, foi desenvolvido um header contendo as informações do usuário e o saldo atual da carteira. Além disso, há um formulário para adicionar uma nova despesa com os campos "Data", "Categoria", "Descrição" e "Valor". As informações preenchidas no formulário são salvas no estado global da aplicação.
