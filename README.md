@@ -1,13 +1,52 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# Trybewallet
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Projeto Carteira Pessoal
+Este projeto consiste em uma aplicação web para gerenciamento de despesas pessoais. A aplicação possui uma página inicial de login com os campos "E-mail" e "Senha", onde o usuário deve informar suas credenciais para acessar a página principal da carteira.
+
+Na página principal, foi desenvolvido um header contendo as informações do usuário e o saldo atual da carteira. Além disso, há um formulário para adicionar uma nova despesa com os campos "Data", "Categoria", "Descrição" e "Valor". As informações preenchidas no formulário são salvas no estado global da aplicação.
+
+A aplicação também conta com uma tabela de gastos que exibe as despesas adicionadas pelo usuário, contendo as colunas "Data", "Categoria", "Descrição" e "Valor". A tabela é atualizada automaticamente a cada nova despesa adicionada pelo usuário.
+
+Para garantir a qualidade da aplicação, foram desenvolvidos testes unitários para atingir 60% de cobertura total da aplicação. Além disso, a lógica para alimentar a tabela com as informações do estado global da aplicação também foi testada.
+
+Por fim, a aplicação foi refinada para atingir 90% de cobertura total, garantindo maior confiabilidade e segurança no gerenciamento das despesas pessoais.
+
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:MarcoViana0303/project-trybewallet.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd project-trybewallet
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run start
+```
+
+
+## Feedback
+
+Alguma dúvida ou encontrou algum problema no código? Não deixe de entrar em contato comigo!
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://marcoviana-dev.vercel.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marco-viana2022/)
+
+
