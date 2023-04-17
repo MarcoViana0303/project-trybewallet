@@ -39,6 +39,9 @@ Inicie o servidor
   npm run start
 ```
 
+## Ilustração do projeto
+![Projeto Trybewallet- Login](./trybewallet1.png)
+![Projeto Trybewallet- Página de despesas](./trybewallet2.png)
 
 ## Feedback
 
