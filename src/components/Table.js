@@ -7,7 +7,7 @@ class Table extends Component {
     const { expenses } = this.props;
     return (
       <div>
-        <table className='table-wallet'>
+        <table className="table-wallet">
           <thead>
 
             <tr>

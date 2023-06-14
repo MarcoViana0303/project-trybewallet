@@ -42,7 +42,7 @@ class Login extends React.Component {
     const { isBtnDisabled } = this.state;
     return (
       <div>
-        <form className='form-login'>
+        <form className="form-login">
           <input
             type="text"
             placeholder="email"
